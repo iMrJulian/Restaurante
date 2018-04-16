@@ -9,9 +9,10 @@ package restaurante.componente.platoFuerte;
  *
  * @author Leo Wiesner
  */
-public class Fruta extends PlatoFuerte{
+public class Fruta extends PlatoFuerte {
+
     @Override
-         public String guardar(String eleccion){
-        return "\tEnsalada "+eleccion;
-         }
+    public String guardar(String eleccion) {
+        return "\tEnsalada " + eleccion;
+    }
 }

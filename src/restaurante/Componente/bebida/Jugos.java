@@ -11,7 +11,7 @@ public class Jugos extends Bebida{
             
     @Override
     public String guardar(String sabor){
-        return "\t"+sabor+"en"+adicion;
+        return "\tJugo de "+sabor+" en "+adicion;
     }
     
 }
