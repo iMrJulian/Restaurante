@@ -16,6 +16,8 @@ public class JFramePostre extends javax.swing.JFrame {
      */
     public JFramePostre() {
         initComponents();
+        jLabel1.setVisible(false);
+        jTextField1.setVisible(false);
     }
 
     /**
@@ -27,21 +29,78 @@ public class JFramePostre extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jrbtnFrio = new javax.swing.JRadioButton();
+        jrbtnCaliente = new javax.swing.JRadioButton();
+        jrbtnFrito = new javax.swing.JRadioButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Nombre del postre");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jrbtnFrio.setText("Postre frio");
+        jrbtnFrio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnFrioActionPerformed(evt);
+            }
+        });
+
+        jrbtnCaliente.setText("Postre caliente");
+
+        jrbtnFrito.setText("Postre frito");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jrbtnFrito)
+                    .addComponent(jrbtnCaliente)
+                    .addComponent(jrbtnFrio)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jrbtnFrio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbtnCaliente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jrbtnFrito)
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jrbtnFrioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFrioActionPerformed
+        jrbtnFrito.setSelected(false);
+        jrbtnCaliente.setSelected(false);
+        jLabel1.setVisible(true);
+        jTextField1.setVisible(true);
+    }//GEN-LAST:event_jrbtnFrioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +138,10 @@ public class JFramePostre extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JRadioButton jrbtnCaliente;
+    private javax.swing.JRadioButton jrbtnFrio;
+    private javax.swing.JRadioButton jrbtnFrito;
     // End of variables declaration//GEN-END:variables
 }
