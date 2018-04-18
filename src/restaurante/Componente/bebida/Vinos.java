@@ -9,9 +9,10 @@ package restaurante.Componente.bebida;
  *
  * @author david
  */
-public class Vinos extends Licores{
+public class Vinos extends Licores {
+
     @Override
-    public String guardar(String tipo){
-        return "\tVino"+tipo;
+    public String guardar(String tipo) {
+        return "\tVino" + tipo;
     }
 }

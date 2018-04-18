@@ -5,17 +5,16 @@
  */
 package restaurante.componente.platoFuerte;
 
-
 /**
  *
  * @author Leo Wiesner
  */
-
 public class Proteina extends PlatoFuerte {
+
     @Override
     public String guardar(String eleccion) {
         return "\tProteina" + eleccion;
-    
+
     }
 
 }

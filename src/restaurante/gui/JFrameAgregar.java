@@ -5,21 +5,17 @@
  */
 package restaurante.gui;
 
-import javax.swing.JComboBox;
-
 /**
  *
  * @author Estudiantes
  */
 public class JFrameAgregar extends javax.swing.JFrame {
 
-    JFrameAgregar x;
     /**
      * Creates new form JFrameAgregar
      */
     public JFrameAgregar() {
         initComponents();
-        x = new JFrameAgregar();
     }
 
     /**
@@ -98,18 +94,30 @@ public class JFrameAgregar extends javax.swing.JFrame {
 
     private void jrbtnAperitivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAperitivoActionPerformed
         new JFrameAperitivo().setVisible(true);
+        jrbtnBebida.setSelected(false);
+        jrbtnFuerte.setSelected(false);
+        jrbtnPostre.setSelected(false);
     }//GEN-LAST:event_jrbtnAperitivoActionPerformed
 
     private void jrbtnFuerteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFuerteActionPerformed
         new JFrameFuerte().setVisible(true);
+        jrbtnBebida.setSelected(false);
+        jrbtnAperitivo.setSelected(false);
+        jrbtnPostre.setSelected(false);
     }//GEN-LAST:event_jrbtnFuerteActionPerformed
 
     private void jrbtnBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnBebidaActionPerformed
         new JFrameBebida().setVisible(true);
+        jrbtnPostre.setSelected(false);
+        jrbtnFuerte.setSelected(false);
+        jrbtnAperitivo.setSelected(false);
     }//GEN-LAST:event_jrbtnBebidaActionPerformed
 
     private void jrbtnPostreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnPostreActionPerformed
-         new JFramePostre().setVisible(true);
+        new JFramePostre().setVisible(true);
+        jrbtnBebida.setSelected(false);
+        jrbtnFuerte.setSelected(false);
+        jrbtnAperitivo.setSelected(false);
     }//GEN-LAST:event_jrbtnPostreActionPerformed
 
     /**

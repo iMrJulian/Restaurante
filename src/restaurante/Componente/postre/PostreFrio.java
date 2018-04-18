@@ -9,9 +9,10 @@ package restaurante.Componente.postre;
  *
  * @author david
  */
-public class PostreFrio extends Postre{
+public class PostreFrio extends Postre {
+
     @Override
-    public String guardar(String postre){
-        return "\t"+postre;
+    public String guardar(String postre) {
+        return "\t" + postre;
     }
 }

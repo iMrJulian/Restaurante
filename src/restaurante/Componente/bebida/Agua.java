@@ -9,9 +9,10 @@ package restaurante.Componente.bebida;
  *
  * @author david
  */
-public class Agua extends Bebida{
+public class Agua extends Bebida {
+
     @Override
-    public String guardar(String marca){
-        return "\tAgua"+marca;
+    public String guardar(String marca) {
+        return "\tAgua" + marca;
     }
 }

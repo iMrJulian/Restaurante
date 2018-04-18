@@ -11,7 +11,8 @@ import restaurante.Componente.*;
  *
  * @author Leo Wiesner
  */
-public abstract class PlatoFuerte extends Componente{
-  @Override
-  public abstract String guardar(String alimento);
+public abstract class PlatoFuerte extends Componente {
+
+    @Override
+    public abstract String guardar(String alimento);
 }

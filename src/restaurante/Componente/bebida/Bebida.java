@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package restaurante.Componente.bebida;
+
 import restaurante.Componente.*;
 
 /**
  *
  * @author Estudiantes
  */
-public abstract class Bebida extends Componente{
+public abstract class Bebida extends Componente {
+
     @Override
     public abstract String guardar(String alimento);
 }

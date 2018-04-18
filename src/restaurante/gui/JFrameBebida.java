@@ -5,6 +5,9 @@
  */
 package restaurante.gui;
 
+import restaurante.Componente.*;
+import restaurante.Componente.bebida.*;
+
 /**
  *
  * @author Estudiantes
@@ -14,6 +17,8 @@ public class JFrameBebida extends javax.swing.JFrame {
     /**
      * Creates new form JFrameBebida
      */
+    Componente alimento;
+
     public JFrameBebida() {
         initComponents();
     }
@@ -27,44 +32,126 @@ public class JFrameBebida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jrbtnLicores = new javax.swing.JRadioButton();
-        Jugos = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        jrbtnJugos = new javax.swing.JRadioButton();
+        jrbtnLimonada = new javax.swing.JRadioButton();
+        jTextField1 = new javax.swing.JTextField();
+        jrbtnAgua = new javax.swing.JRadioButton();
+        jrbtnCervezas = new javax.swing.JRadioButton();
+        jrbtnVinos = new javax.swing.JRadioButton();
+        jrbtnGaseosas = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jrbtnLicores.setText("Licores");
+        jrbtnLicores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnLicoresActionPerformed(evt);
+            }
+        });
 
-        Jugos.setText("Jugos");
+        jrbtnJugos.setText("Jugos");
 
-        jRadioButton1.setText("Limonada");
+        jrbtnLimonada.setText("Limonada");
+
+        jTextField1.setEnabled(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jrbtnAgua.setText("Agua");
+
+        jrbtnCervezas.setText("Cervezas");
+        jrbtnCervezas.setEnabled(false);
+
+        jrbtnVinos.setText("Vinos");
+        jrbtnVinos.setEnabled(false);
+
+        jrbtnGaseosas.setText("Gaseosas");
+        jrbtnGaseosas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnGaseosasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jrbtnLicores)
-                .addGap(71, 71, 71)
-                .addComponent(Jugos)
-                .addGap(98, 98, 98)
-                .addComponent(jRadioButton1)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnAgua)
+                            .addComponent(jrbtnLimonada))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnCervezas)
+                            .addComponent(jrbtnVinos))
+                        .addGap(0, 32, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnLicores)
+                            .addComponent(jrbtnGaseosas)
+                            .addComponent(jrbtnJugos))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addGap(43, 43, 43)
+                .addComponent(jrbtnGaseosas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbtnLicores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbtnJugos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrbtnLicores)
-                    .addComponent(Jugos)
-                    .addComponent(jRadioButton1))
-                .addContainerGap(256, Short.MAX_VALUE))
+                    .addComponent(jrbtnLimonada)
+                    .addComponent(jrbtnCervezas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrbtnAgua)
+                    .addComponent(jrbtnVinos))
+                .addGap(38, 38, 38)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        alimento.guardar(jTextField1.getText());
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jrbtnGaseosasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnGaseosasActionPerformed
+        alimento = new Gaseosas();
+        jrbtnLimonada.setSelected(false);
+        jrbtnAgua.setSelected(false);
+        jrbtnLicores.setSelected(false);
+        jrbtnJugos.setSelected(false);
+        jTextField1.setEnabled(true);
+    }//GEN-LAST:event_jrbtnGaseosasActionPerformed
+
+    private void jrbtnLicoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnLicoresActionPerformed
+        jrbtnGaseosas.setSelected(false);
+        jrbtnAgua.setSelected(false);
+        jrbtnJugos.setSelected(false);
+        jrbtnLimonada.setSelected(false);
+        jrbtnCervezas.setEnabled(true);
+        jrbtnVinos.setEnabled(true);
+        jTextField1.setEnabled(true);
+    }//GEN-LAST:event_jrbtnLicoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,8 +189,15 @@ public class JFrameBebida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Jugos;
-    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JRadioButton jrbtnAgua;
+    private javax.swing.JRadioButton jrbtnCervezas;
+    private javax.swing.JRadioButton jrbtnGaseosas;
+    private javax.swing.JRadioButton jrbtnJugos;
     private javax.swing.JRadioButton jrbtnLicores;
+    private javax.swing.JRadioButton jrbtnLimonada;
+    private javax.swing.JRadioButton jrbtnVinos;
     // End of variables declaration//GEN-END:variables
 }

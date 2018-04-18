@@ -10,5 +10,6 @@ package restaurante.Componente;
  * @author Estudiantes
  */
 public abstract class Componente {
-    public abstract String guardar (String alimento);
+
+    public abstract String guardar(String alimento);
 }

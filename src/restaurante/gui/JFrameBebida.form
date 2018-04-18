@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -24,26 +30,59 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Component id="jrbtnLicores" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-              <Component id="Jugos" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="198" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jrbtnAgua" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbtnLimonada" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jrbtnCervezas" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbtnVinos" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jrbtnLicores" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbtnGaseosas" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jrbtnJugos" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTextField1" min="-2" pref="185" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              <Component id="jrbtnGaseosas" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jrbtnLicores" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jrbtnJugos" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jrbtnLicores" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Jugos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jrbtnLimonada" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jrbtnCervezas" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="256" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jrbtnAgua" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jrbtnVinos" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="jTextField1" min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,16 +92,52 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Licores"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbtnLicoresActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="Jugos">
+    <Component class="javax.swing.JRadioButton" name="jrbtnJugos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Jugos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="jrbtnLimonada">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limonada"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jrbtnAgua">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agua"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jrbtnCervezas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cervezas"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jrbtnVinos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vinos"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="jrbtnGaseosas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gaseosas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jrbtnGaseosasActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

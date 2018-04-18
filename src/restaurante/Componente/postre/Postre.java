@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package restaurante.Componente.postre;
+
 import restaurante.Componente.*;
 
 /**
@@ -11,6 +12,7 @@ import restaurante.Componente.*;
  * @author david
  */
 public abstract class Postre extends Componente {
+
     @Override
     public abstract String guardar(String alimento);
 }

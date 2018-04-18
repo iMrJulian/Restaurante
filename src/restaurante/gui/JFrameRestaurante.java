@@ -12,6 +12,7 @@ package restaurante.gui;
 public class JFrameRestaurante extends javax.swing.JFrame {
 
     JFrameAgregar ap;
+
     /**
      * Creates new form JFrameRestaurante
      */

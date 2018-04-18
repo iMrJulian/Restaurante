@@ -12,10 +12,9 @@ import restaurante.componente.platoFuerte.PlatoFuerte;
  * @author Leo Wiesner
  */
 public class Verdura extends PlatoFuerte {
-    @Override     
-    public String guardar(String eleccion){
-        return "\tVerdura "+eleccion;
-         }
-}
-    
 
+    @Override
+    public String guardar(String eleccion) {
+        return "\tVerdura " + eleccion;
+    }
+}
