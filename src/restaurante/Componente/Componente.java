@@ -11,5 +11,7 @@ package restaurante.Componente;
  */
 public abstract class Componente {
 
+    String plato;
+
     public abstract String guardar(String alimento);
 }

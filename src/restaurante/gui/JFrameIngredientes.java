@@ -16,6 +16,8 @@ public class JFrameIngredientes extends javax.swing.JFrame {
      */
     public JFrameIngredientes() {
         initComponents();
+        jTextField1.setVisible(false);
+        jLabel1.setVisible(false);
     }
 
     /**
@@ -27,22 +29,42 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        jrbtnProteina = new javax.swing.JRadioButton();
+        jrbtnGranos = new javax.swing.JRadioButton();
+        jrbtnVerdura = new javax.swing.JRadioButton();
+        jrbtnFruta = new javax.swing.JRadioButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jRadioButton1.setText("Proteina");
+        jrbtnProteina.setText("Proteina");
+        jrbtnProteina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnProteinaActionPerformed(evt);
+            }
+        });
 
-        jRadioButton2.setText("Granos");
+        jrbtnGranos.setText("Granos");
+        jrbtnGranos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnGranosActionPerformed(evt);
+            }
+        });
 
-        jRadioButton3.setText("Verdura");
+        jrbtnVerdura.setText("Verdura");
+        jrbtnVerdura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnVerduraActionPerformed(evt);
+            }
+        });
 
-        jRadioButton4.setText("Fruta");
+        jrbtnFruta.setText("Fruta");
+        jrbtnFruta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnFrutaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Ingrediente");
 
@@ -55,10 +77,10 @@ public class JFrameIngredientes extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRadioButton1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton4, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addComponent(jrbtnProteina, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnGranos, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnVerdura, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbtnFruta, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -70,13 +92,13 @@ public class JFrameIngredientes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jRadioButton1)
+                .addComponent(jrbtnProteina)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
+                .addComponent(jrbtnGranos)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
+                .addComponent(jrbtnVerdura)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton4)
+                .addComponent(jrbtnFruta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -86,6 +108,38 @@ public class JFrameIngredientes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jrbtnProteinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnProteinaActionPerformed
+        jrbtnFruta.setSelected(false);
+        jrbtnGranos.setSelected(false);
+        jrbtnVerdura.setSelected(false);
+        jTextField1.setVisible(true);
+        jLabel1.setVisible(true);
+    }//GEN-LAST:event_jrbtnProteinaActionPerformed
+
+    private void jrbtnGranosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnGranosActionPerformed
+        jrbtnFruta.setSelected(false);
+        jrbtnProteina.setSelected(false);
+        jrbtnVerdura.setSelected(false);
+        jTextField1.setVisible(true);
+        jLabel1.setVisible(true);
+    }//GEN-LAST:event_jrbtnGranosActionPerformed
+
+    private void jrbtnVerduraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnVerduraActionPerformed
+        jrbtnProteina.setSelected(false);
+        jrbtnGranos.setSelected(false);
+        jrbtnVerdura.setSelected(false);
+        jTextField1.setVisible(true);
+        jLabel1.setVisible(true);
+    }//GEN-LAST:event_jrbtnVerduraActionPerformed
+
+    private void jrbtnFrutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFrutaActionPerformed
+        jrbtnFruta.setSelected(false);
+        jrbtnGranos.setSelected(false);
+        jrbtnProteina.setSelected(false);
+        jTextField1.setVisible(true);
+        jLabel1.setVisible(true);
+    }//GEN-LAST:event_jrbtnFrutaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,10 +178,10 @@ public class JFrameIngredientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JRadioButton jrbtnFruta;
+    private javax.swing.JRadioButton jrbtnGranos;
+    private javax.swing.JRadioButton jrbtnProteina;
+    private javax.swing.JRadioButton jrbtnVerdura;
     // End of variables declaration//GEN-END:variables
 }

@@ -14,8 +14,13 @@ public class JFrameAperitivo extends javax.swing.JFrame {
     /**
      * Creates new form JFrameAperitivo
      */
+    
+    
     public JFrameAperitivo() {
         initComponents();
+        jbtnFinalizar.setVisible(false);
+        jbtnAgregar.setVisible(false);
+        
     }
 
     /**
@@ -29,8 +34,8 @@ public class JFrameAperitivo extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jbtnAgregar = new javax.swing.JButton();
+        jbtnFinalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,9 +47,14 @@ public class JFrameAperitivo extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Agregar Ingediente");
+        jbtnAgregar.setText("Agregar Ingediente");
+        jbtnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnAgregarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Finalizar");
+        jbtnFinalizar.setText("Finalizar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,9 +68,9 @@ public class JFrameAperitivo extends javax.swing.JFrame {
                 .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jbtnAgregar)
                 .addGap(30, 30, 30)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
         );
         layout.setVerticalGroup(
@@ -72,8 +82,8 @@ public class JFrameAperitivo extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtnAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -81,8 +91,13 @@ public class JFrameAperitivo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        jbtnFinalizar.setVisible(true);
+        jbtnAgregar.setVisible(true);
     }//GEN-LAST:event_jTextField1ActionPerformed
+    
+    private void jbtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAgregarActionPerformed
+        new JFrameAgregar().ingredientes.setVisible(true);
+    }//GEN-LAST:event_jbtnAgregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,9 +135,9 @@ public class JFrameAperitivo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton jbtnAgregar;
+    private javax.swing.JButton jbtnFinalizar;
     // End of variables declaration//GEN-END:variables
 }

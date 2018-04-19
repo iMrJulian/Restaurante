@@ -10,12 +10,23 @@ package restaurante.gui;
  * @author Estudiantes
  */
 public class JFrameAgregar extends javax.swing.JFrame {
-
+    
+    JFrameAperitivo aperitivo;
+    JFrameFuerte fuerte;
+    JFrameBebida bebida;
+    JFramePostre postre;
+    JFrameIngredientes ingredientes;
+    JFrameAgregar Agregar;
     /**
      * Creates new form JFrameAgregar
      */
     public JFrameAgregar() {
         initComponents();
+        aperitivo = new JFrameAperitivo();
+        fuerte = new JFrameFuerte();
+        bebida = new JFrameBebida();
+        postre = new JFramePostre();
+        ingredientes =  new JFrameIngredientes();
     }
 
     /**
@@ -73,7 +84,7 @@ public class JFrameAgregar extends javax.swing.JFrame {
                     .addComponent(jrbtnBebida)
                     .addComponent(jrbtnFuerte)
                     .addComponent(jrbtnAperitivo))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,35 +97,35 @@ public class JFrameAgregar extends javax.swing.JFrame {
                 .addComponent(jrbtnBebida)
                 .addGap(18, 18, 18)
                 .addComponent(jrbtnPostre)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jrbtnAperitivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAperitivoActionPerformed
-        new JFrameAperitivo().setVisible(true);
+        aperitivo.setVisible(true);
         jrbtnBebida.setSelected(false);
         jrbtnFuerte.setSelected(false);
         jrbtnPostre.setSelected(false);
     }//GEN-LAST:event_jrbtnAperitivoActionPerformed
 
     private void jrbtnFuerteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFuerteActionPerformed
-        new JFrameFuerte().setVisible(true);
+        fuerte.setVisible(true);
         jrbtnBebida.setSelected(false);
         jrbtnAperitivo.setSelected(false);
         jrbtnPostre.setSelected(false);
     }//GEN-LAST:event_jrbtnFuerteActionPerformed
 
     private void jrbtnBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnBebidaActionPerformed
-        new JFrameBebida().setVisible(true);
+        bebida.setVisible(true);
         jrbtnPostre.setSelected(false);
         jrbtnFuerte.setSelected(false);
         jrbtnAperitivo.setSelected(false);
     }//GEN-LAST:event_jrbtnBebidaActionPerformed
 
     private void jrbtnPostreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnPostreActionPerformed
-        new JFramePostre().setVisible(true);
+        postre.setVisible(true);
         jrbtnBebida.setSelected(false);
         jrbtnFuerte.setSelected(false);
         jrbtnAperitivo.setSelected(false);
