@@ -14,13 +14,10 @@ public class JFrameAperitivo extends javax.swing.JFrame {
     /**
      * Creates new form JFrameAperitivo
      */
-    
-    
     public JFrameAperitivo() {
         initComponents();
         jbtnFinalizar.setVisible(false);
         jbtnAgregar.setVisible(false);
-        
     }
 
     /**
@@ -96,7 +93,7 @@ public class JFrameAperitivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
     
     private void jbtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAgregarActionPerformed
-        new JFrameAgregar().ingredientes.setVisible(true);
+        new JFrameIngredientes().setVisible(true);
     }//GEN-LAST:event_jbtnAgregarActionPerformed
 
     /**

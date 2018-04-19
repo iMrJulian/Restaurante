@@ -36,7 +36,7 @@ public class JFrameFuerte extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Ingrese el nombre del aperitivo");
+        jLabel1.setText("Ingrese el nombre del plato");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

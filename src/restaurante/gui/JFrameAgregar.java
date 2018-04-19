@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package restaurante.gui;
+import restaurante.Componente.*;
 
 /**
  *
@@ -17,6 +18,9 @@ public class JFrameAgregar extends javax.swing.JFrame {
     JFramePostre postre;
     JFrameIngredientes ingredientes;
     JFrameAgregar Agregar;
+    Componente tipo;
+    Plato alimento;
+    
     /**
      * Creates new form JFrameAgregar
      */

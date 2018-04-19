@@ -54,8 +54,18 @@ public class JFramePostre extends javax.swing.JFrame {
         });
 
         jrbtnCaliente.setText("Postre caliente");
+        jrbtnCaliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnCalienteActionPerformed(evt);
+            }
+        });
 
         jrbtnFrito.setText("Postre frito");
+        jrbtnFrito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbtnFritoActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Seleccione el tipo del postre");
 
@@ -107,6 +117,20 @@ public class JFramePostre extends javax.swing.JFrame {
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
     }//GEN-LAST:event_jrbtnFrioActionPerformed
+
+    private void jrbtnCalienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnCalienteActionPerformed
+        jrbtnFrio.setSelected(false);
+        jrbtnFrito.setSelected(false);
+        jLabel1.setVisible(true);
+        jTextField1.setVisible(true);
+    }//GEN-LAST:event_jrbtnCalienteActionPerformed
+
+    private void jrbtnFritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFritoActionPerformed
+        jrbtnFrito.setSelected(false);
+        jrbtnCaliente.setSelected(false);
+        jLabel1.setVisible(true);
+        jTextField1.setVisible(true);
+    }//GEN-LAST:event_jrbtnFritoActionPerformed
 
     /**
      * @param args the command line arguments
