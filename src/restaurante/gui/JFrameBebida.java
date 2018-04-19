@@ -17,11 +17,14 @@ public class JFrameBebida extends javax.swing.JFrame {
     /**
      * Creates new form JFrameBebida
      */
-   // JFrameAgregar Agre;
+
+    
+    Componente alimento;
+    Plato tipo;
 
     public JFrameBebida() {
         initComponents();
-        //Agre = new JFrameAgregar();
+        tipo = new Plato ();
     }
 
     /**
@@ -157,7 +160,8 @@ public class JFrameBebida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        //Agre.alimento.guardarMemoria(Agre.tipo.guardar(jTextField1.getText()), Agre.tipo);
+        tipo.guardarMemoria(alimento.guardar(jTextField1.getText()), alimento);
+        this.dispose();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jrbtnGaseosasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnGaseosasActionPerformed
@@ -169,7 +173,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
         jTextField1.setEnabled(true);
-        
+        alimento = new Gaseosas();
     }//GEN-LAST:event_jrbtnGaseosasActionPerformed
 
     private void jrbtnLicoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnLicoresActionPerformed
@@ -191,6 +195,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
         jTextField1.setEnabled(true);
+        alimento = new Jugos();
     }//GEN-LAST:event_jrbtnJugosActionPerformed
 
     private void jrbtnLimonadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnLimonadaActionPerformed
@@ -202,6 +207,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
         jTextField1.setEnabled(true);
+        alimento = new Limonada();
     }//GEN-LAST:event_jrbtnLimonadaActionPerformed
 
     private void jrbtnAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAguaActionPerformed
@@ -213,6 +219,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
         jTextField1.setEnabled(true);
+        alimento = new Agua();
     }//GEN-LAST:event_jrbtnAguaActionPerformed
 
     private void jrbtnCervezasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnCervezasActionPerformed
@@ -221,7 +228,8 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLicores.setSelected(false);
         jrbtnLimonada.setSelected(false);
         jrbtnAgua.setSelected(false);
-        jrbtnVinos.setSelected(false);        
+        jrbtnVinos.setSelected(false);
+        alimento = new Cervezas();
     }//GEN-LAST:event_jrbtnCervezasActionPerformed
 
     private void jrbtnVinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnVinosActionPerformed
@@ -230,7 +238,8 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLicores.setSelected(false);
         jrbtnLimonada.setSelected(false);
         jrbtnAgua.setSelected(false);
-        jrbtnCervezas.setSelected(false);      
+        jrbtnCervezas.setSelected(false);
+        alimento = new Vinos();
     }//GEN-LAST:event_jrbtnVinosActionPerformed
 
     /**

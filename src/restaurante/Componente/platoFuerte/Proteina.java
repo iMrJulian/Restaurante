@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package restaurante.componente.platoFuerte;
+package restaurante.Componente.platoFuerte;
 
 /**
  *
@@ -13,7 +13,7 @@ public class Proteina extends PlatoFuerte {
 
     @Override
     public String guardar(String eleccion) {
-        return "\tProteina" + eleccion;
+        return "\t" + eleccion;
 
     }
 

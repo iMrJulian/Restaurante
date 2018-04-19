@@ -5,7 +5,6 @@
  */
 package restaurante.Componente.platoFuerte;
 
-import restaurante.componente.platoFuerte.PlatoFuerte;
 
 /**
  *

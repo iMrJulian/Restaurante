@@ -5,6 +5,10 @@
  */
 package restaurante.gui;
 
+import javax.swing.JFrame;
+import restaurante.Componente.*;
+import restaurante.Componente.platoFuerte.*;
+
 /**
  *
  * @author Estudiantes
@@ -13,11 +17,15 @@ public class JFrameIngredientes extends javax.swing.JFrame {
 
     /**
      * Creates new form JFrameIngredientes
+     * 
      */
+    Componente alimento;
+    Plato tipo;
     public JFrameIngredientes() {
         initComponents();
         jTextField1.setVisible(false);
         jLabel1.setVisible(false);
+        tipo = new Plato();
     }
 
     /**
@@ -63,6 +71,12 @@ public class JFrameIngredientes extends javax.swing.JFrame {
         jrbtnFruta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jrbtnFrutaActionPerformed(evt);
+            }
+        });
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
             }
         });
 
@@ -115,6 +129,7 @@ public class JFrameIngredientes extends javax.swing.JFrame {
         jrbtnVerdura.setSelected(false);
         jTextField1.setVisible(true);
         jLabel1.setVisible(true);
+        alimento = new Proteina();
     }//GEN-LAST:event_jrbtnProteinaActionPerformed
 
     private void jrbtnGranosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnGranosActionPerformed
@@ -123,6 +138,7 @@ public class JFrameIngredientes extends javax.swing.JFrame {
         jrbtnVerdura.setSelected(false);
         jTextField1.setVisible(true);
         jLabel1.setVisible(true);
+        alimento = new Granos();
     }//GEN-LAST:event_jrbtnGranosActionPerformed
 
     private void jrbtnVerduraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnVerduraActionPerformed
@@ -131,6 +147,7 @@ public class JFrameIngredientes extends javax.swing.JFrame {
         jrbtnVerdura.setSelected(false);
         jTextField1.setVisible(true);
         jLabel1.setVisible(true);
+        alimento = new Verdura();
     }//GEN-LAST:event_jrbtnVerduraActionPerformed
 
     private void jrbtnFrutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFrutaActionPerformed
@@ -139,7 +156,13 @@ public class JFrameIngredientes extends javax.swing.JFrame {
         jrbtnProteina.setSelected(false);
         jTextField1.setVisible(true);
         jLabel1.setVisible(true);
+        alimento = new Fruta();
     }//GEN-LAST:event_jrbtnFrutaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        tipo.guardarMemoria(alimento.guardar(jTextField1.getText()), alimento);
+        this.dispose();
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

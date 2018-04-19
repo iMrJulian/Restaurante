@@ -5,6 +5,9 @@
  */
 package restaurante.gui;
 
+import restaurante.Componente.*;
+import restaurante.Componente.postre.*;
+
 /**
  *
  * @author Estudiantes
@@ -14,10 +17,13 @@ public class JFramePostre extends javax.swing.JFrame {
     /**
      * Creates new form JFramePostre
      */
+    Componente alimento;
+    Plato tipo;
     public JFramePostre() {
         initComponents();
         jLabel1.setVisible(false);
         jTextField1.setVisible(false);
+        tipo = new Plato();
     }
 
     /**
@@ -108,7 +114,8 @@ public class JFramePostre extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        tipo.guardarMemoria(alimento.guardar(jTextField1.getText()), alimento);
+        this.dispose();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jrbtnFrioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFrioActionPerformed
@@ -116,6 +123,8 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnCaliente.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        alimento = new PostreFrio();
+        
     }//GEN-LAST:event_jrbtnFrioActionPerformed
 
     private void jrbtnCalienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnCalienteActionPerformed
@@ -123,6 +132,7 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnFrito.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        alimento = new PostreCaliente();
     }//GEN-LAST:event_jrbtnCalienteActionPerformed
 
     private void jrbtnFritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFritoActionPerformed
@@ -130,6 +140,7 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnCaliente.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        alimento = new PostreFrito();
     }//GEN-LAST:event_jrbtnFritoActionPerformed
 
     /**

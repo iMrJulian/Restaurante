@@ -5,6 +5,9 @@
  */
 package restaurante.gui;
 
+import restaurante.Componente.*;
+
+
 /**
  *
  * @author Estudiantes
@@ -14,10 +17,12 @@ public class JFrameFuerte extends javax.swing.JFrame {
     /**
      * Creates new form JFrameFuerte
      */
+    JFrameIngredientes ingredientes;
     public JFrameFuerte() {
         initComponents();
         jbtnFinalizar.setVisible(false);
         jbtnAgregar.setVisible(false);
+        ingredientes = new JFrameIngredientes();
     }
 
     /**
@@ -52,6 +57,11 @@ public class JFrameFuerte extends javax.swing.JFrame {
         });
 
         jbtnFinalizar.setText("Finalizar");
+        jbtnFinalizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnFinalizarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,8 +104,12 @@ public class JFrameFuerte extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jbtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAgregarActionPerformed
-        new JFrameIngredientes().setVisible(true);
+        ingredientes.setVisible(true);
     }//GEN-LAST:event_jbtnAgregarActionPerformed
+
+    private void jbtnFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFinalizarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jbtnFinalizarActionPerformed
 
     /**
      * @param args the command line arguments

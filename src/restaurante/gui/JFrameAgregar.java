@@ -31,6 +31,7 @@ public class JFrameAgregar extends javax.swing.JFrame {
         bebida = new JFrameBebida();
         postre = new JFramePostre();
         ingredientes =  new JFrameIngredientes();
+       
     }
 
     /**
@@ -46,6 +47,7 @@ public class JFrameAgregar extends javax.swing.JFrame {
         jrbtnFuerte = new javax.swing.JRadioButton();
         jrbtnBebida = new javax.swing.JRadioButton();
         jrbtnPostre = new javax.swing.JRadioButton();
+        jbtnFinalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +79,13 @@ public class JFrameAgregar extends javax.swing.JFrame {
             }
         });
 
+        jbtnFinalizar.setText("Finalizar");
+        jbtnFinalizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnFinalizarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,7 +97,11 @@ public class JFrameAgregar extends javax.swing.JFrame {
                     .addComponent(jrbtnBebida)
                     .addComponent(jrbtnFuerte)
                     .addComponent(jrbtnAperitivo))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addComponent(jbtnFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +114,9 @@ public class JFrameAgregar extends javax.swing.JFrame {
                 .addComponent(jrbtnBebida)
                 .addGap(18, 18, 18)
                 .addComponent(jrbtnPostre)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(jbtnFinalizar, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -109,6 +124,9 @@ public class JFrameAgregar extends javax.swing.JFrame {
 
     private void jrbtnAperitivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAperitivoActionPerformed
         aperitivo.setVisible(true);
+        bebida.setVisible(false);
+        fuerte.setVisible(false);
+        postre.setVisible(false);
         jrbtnBebida.setSelected(false);
         jrbtnFuerte.setSelected(false);
         jrbtnPostre.setSelected(false);
@@ -134,6 +152,10 @@ public class JFrameAgregar extends javax.swing.JFrame {
         jrbtnFuerte.setSelected(false);
         jrbtnAperitivo.setSelected(false);
     }//GEN-LAST:event_jrbtnPostreActionPerformed
+
+    private void jbtnFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFinalizarActionPerformed
+        new JFrameRestaurante().setVisible(true);
+    }//GEN-LAST:event_jbtnFinalizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,6 +193,7 @@ public class JFrameAgregar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jbtnFinalizar;
     private javax.swing.JRadioButton jrbtnAperitivo;
     private javax.swing.JRadioButton jrbtnBebida;
     private javax.swing.JRadioButton jrbtnFuerte;

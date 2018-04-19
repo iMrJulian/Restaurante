@@ -13,15 +13,28 @@ import java.util.ArrayList;
  */
 public class Plato {
 
-    public ArrayList<Componente> menu;
+    public ArrayList<Componente> aperitivo;
+    public ArrayList<Componente> fuerte;
+    public ArrayList<Componente> bebida;
+    public ArrayList<Componente> postre;
 
     public Plato() {
-        menu = new ArrayList<Componente>();
+        aperitivo = new ArrayList<Componente>();
+        fuerte = new ArrayList<Componente>();
+        bebida = new ArrayList<Componente>();
+        postre = new ArrayList<Componente>();
     }
 
-    public void guardarMemoria(String alimento, Componente m) {
-        m.plato = alimento;
-        menu.add(m);
+    public void guardarMemoria(String alimento, Componente m ) {
+        m.setPlato(alimento);
+        aperitivo.add(m);
     }
 
+    public String mostrarMemorias() {
+        String mem = "";
+        for (Componente memoria : aperitivo) {
+             mem = mem + "\n" + memoria.getPlato()+ "\n";
+        }
+        return mem;
+    }
 }
