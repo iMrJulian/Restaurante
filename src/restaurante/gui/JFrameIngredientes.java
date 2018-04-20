@@ -19,8 +19,9 @@ public class JFrameIngredientes extends javax.swing.JFrame {
      * Creates new form JFrameIngredientes
      * 
      */
-    Componente alimento;
+    PlatoFuerte alimento;
     Plato tipo;
+    public static String a;
     public JFrameIngredientes() {
         initComponents();
         jTextField1.setVisible(false);
@@ -160,7 +161,8 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jrbtnFrutaActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        tipo.guardarMemoria(alimento.guardar(jTextField1.getText()), alimento);
+        tipo.guardarPosbe(alimento.guardar(jTextField1.getText()), alimento);
+        a=tipo.mostrarFuerte();
         this.dispose();
     }//GEN-LAST:event_jTextField1ActionPerformed
 

@@ -19,6 +19,8 @@ public class JFramePostre extends javax.swing.JFrame {
      */
     Componente alimento;
     Plato tipo;
+    public static String a;
+    
     public JFramePostre() {
         initComponents();
         jLabel1.setVisible(false);
@@ -82,15 +84,15 @@ public class JFramePostre extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jrbtnFrito)
-                    .addComponent(jrbtnCaliente)
-                    .addComponent(jrbtnFrio)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jrbtnFrito)
+                    .addComponent(jrbtnCaliente)
+                    .addComponent(jrbtnFrio))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +116,13 @@ public class JFramePostre extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        tipo.guardarMemoria(alimento.guardar(jTextField1.getText()), alimento);
+        tipo.guardarPosbe(alimento.guardar(jTextField1.getText()), alimento);
+        a=tipo.mostrarPosbe();
+        jrbtnFrito.setSelected(false);
+        jrbtnCaliente.setSelected(false);
+        jrbtnFrio.setSelected(false);
+        jLabel1.setVisible(false);
+        jTextField1.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -124,7 +132,6 @@ public class JFramePostre extends javax.swing.JFrame {
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
         alimento = new PostreFrio();
-        
     }//GEN-LAST:event_jrbtnFrioActionPerformed
 
     private void jrbtnCalienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnCalienteActionPerformed
@@ -136,7 +143,7 @@ public class JFramePostre extends javax.swing.JFrame {
     }//GEN-LAST:event_jrbtnCalienteActionPerformed
 
     private void jrbtnFritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFritoActionPerformed
-        jrbtnFrito.setSelected(false);
+        jrbtnFrio.setSelected(false);
         jrbtnCaliente.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);

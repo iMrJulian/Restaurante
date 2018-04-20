@@ -12,7 +12,7 @@ import restaurante.Componente.*;
  */
 public class JFrameAgregar extends javax.swing.JFrame {
     
-    JFrameAperitivo aperitivo;
+
     JFrameFuerte fuerte;
     JFrameBebida bebida;
     JFramePostre postre;
@@ -26,12 +26,10 @@ public class JFrameAgregar extends javax.swing.JFrame {
      */
     public JFrameAgregar() {
         initComponents();
-        aperitivo = new JFrameAperitivo();
         fuerte = new JFrameFuerte();
         bebida = new JFrameBebida();
         postre = new JFramePostre();
         ingredientes =  new JFrameIngredientes();
-       
     }
 
     /**
@@ -123,12 +121,9 @@ public class JFrameAgregar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jrbtnAperitivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAperitivoActionPerformed
-        aperitivo.setVisible(true);
-        bebida.setVisible(false);
-        fuerte.setVisible(false);
-        postre.setVisible(false);
+        fuerte.setVisible(true);
         jrbtnBebida.setSelected(false);
-        jrbtnFuerte.setSelected(false);
+        jrbtnAperitivo.setSelected(false);
         jrbtnPostre.setSelected(false);
     }//GEN-LAST:event_jrbtnAperitivoActionPerformed
 

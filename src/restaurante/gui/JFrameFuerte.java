@@ -6,6 +6,7 @@
 package restaurante.gui;
 
 import restaurante.Componente.*;
+import restaurante.Componente.platoFuerte.*;
 
 
 /**
@@ -18,6 +19,8 @@ public class JFrameFuerte extends javax.swing.JFrame {
      * Creates new form JFrameFuerte
      */
     JFrameIngredientes ingredientes;
+    Componente alimento;
+    public static String nombre;
     public JFrameFuerte() {
         initComponents();
         jbtnFinalizar.setVisible(false);
@@ -99,6 +102,7 @@ public class JFrameFuerte extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        nombre=jTextField1.getText();
         jbtnFinalizar.setVisible(true);
         jbtnAgregar.setVisible(true);
     }//GEN-LAST:event_jTextField1ActionPerformed

@@ -12,16 +12,21 @@ import restaurante.Componente.*;
  */
 public class JFrameRestaurante extends javax.swing.JFrame {
 
-    JFrameAgregar ap;
-    Plato tipo;
+    
+
+    
 
     /**
      * Creates new form JFrameRestaurante
      */
+    JFramePostre ap;
+    JFrameBebida ag;
+    JFrameIngredientes ah;
     public JFrameRestaurante() {
         initComponents();
-        ap = new JFrameAgregar();
-        tipo = new Plato();
+         ap = new JFramePostre();
+         ag = new JFrameBebida();
+         ah = new JFrameIngredientes();
     }
 
     /**
@@ -93,7 +98,13 @@ public class JFrameRestaurante extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        jTextArea1.setText(tipo.mostrarMemorias());
+    jTextArea1.setText("");
+    if (!"".equals(ah.a) && ah.a!=null)
+           jTextArea1.setText(jTextArea1.getText()+"Platos\n"+ah.a);
+    if (!"".equals(ap.a) && ap.a!=null)
+           jTextArea1.setText(jTextArea1.getText()+"\nPostres\n"+ap.a);
+     if (!"".equals(ag.a) && ag.a!=null)
+            jTextArea1.setText(jTextArea1.getText()+"\nBebida\n"+ag.a);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

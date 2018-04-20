@@ -13,6 +13,6 @@ public class Vinos extends Licores {
 
     @Override
     public String guardar(String tipo) {
-        return "\tVino" + tipo;
+        return "\tVino " + tipo;
     }
 }

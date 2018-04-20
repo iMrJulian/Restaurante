@@ -13,6 +13,6 @@ public class Limonada extends Bebida {
 
     @Override
     public String guardar(String sabor) {
-        return "\t" + sabor;
+        return "\tLimonada de " + sabor;
     }
 }

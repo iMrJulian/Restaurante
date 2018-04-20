@@ -13,6 +13,6 @@ public class Agua extends Bebida {
 
     @Override
     public String guardar(String marca) {
-        return "\tAgua " + marca;
+        return "\tAgua";
     }
 }

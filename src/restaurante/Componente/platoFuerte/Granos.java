@@ -13,6 +13,6 @@ public class Granos extends PlatoFuerte {
 
     @Override
     public String guardar(String eleccion) {
-        return "\tGranos" + eleccion;
+        return "\tGranos " + eleccion;
     }
 }

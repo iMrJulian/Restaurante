@@ -13,6 +13,6 @@ public class Fruta extends PlatoFuerte {
 
     @Override
     public String guardar(String eleccion) {
-        return "\tEnsalada " + eleccion;
+        return  eleccion;
     }
 }

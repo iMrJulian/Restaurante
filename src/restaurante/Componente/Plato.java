@@ -6,6 +6,7 @@
 package restaurante.Componente;
 
 import java.util.ArrayList;
+import restaurante.Componente.platoFuerte.*;
 
 /**
  *
@@ -14,27 +15,41 @@ import java.util.ArrayList;
 public class Plato {
 
     public ArrayList<Componente> aperitivo;
-    public ArrayList<Componente> fuerte;
+    public ArrayList<PlatoFuerte> fuerte;
     public ArrayList<Componente> bebida;
     public ArrayList<Componente> postre;
 
     public Plato() {
         aperitivo = new ArrayList<Componente>();
-        fuerte = new ArrayList<Componente>();
+        fuerte = new ArrayList<PlatoFuerte>();
         bebida = new ArrayList<Componente>();
         postre = new ArrayList<Componente>();
     }
 
-    public void guardarMemoria(String alimento, Componente m ) {
+    public void guardarPosbe(String alimento, Componente m ) {
         m.setPlato(alimento);
-        aperitivo.add(m);
+        postre.add(m);
     }
-
-    public String mostrarMemorias() {
+    
+    public void guardarPosbe(String alimento, PlatoFuerte m  ) {
+        m.setPlato(alimento);
+        m.setNombre(alimento);
+        fuerte.add(m);
+    }
+    public String mostrarPosbe() {
         String mem = "";
-        for (Componente memoria : aperitivo) {
-             mem = mem + "\n" + memoria.getPlato()+ "\n";
+        for (Componente memoria : postre) {
+             mem = mem + memoria.getPlato()+ "\n";
         }
+        return mem;
+    }
+    public String mostrarFuerte() {
+        String mem = "";
+        for (PlatoFuerte memoria : fuerte) {
+             mem = mem + memoria.getNombre();
+             mem = mem +"\n"+ memoria.getPlato()+ ", ";
+        }
+        mem+="\n";
         return mem;
     }
 }
