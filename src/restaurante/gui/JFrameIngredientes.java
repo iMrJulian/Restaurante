@@ -163,6 +163,13 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         tipo.guardarPosbe(alimento.guardar(jTextField1.getText()), alimento);
         a=tipo.mostrarFuerte();
+        jrbtnFruta.setSelected(false);
+        jrbtnProteina.setSelected(false);
+        jrbtnVerdura.setSelected(false);
+        jrbtnGranos.setSelected(false);
+        jTextField1.setVisible(false);
+        jTextField1.setText("");
+        jLabel1.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jTextField1ActionPerformed
 
