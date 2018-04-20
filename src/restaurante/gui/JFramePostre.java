@@ -131,6 +131,7 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnCaliente.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        jTextField1.setText("");
         alimento = new PostreFrio();
     }//GEN-LAST:event_jrbtnFrioActionPerformed
 
@@ -139,6 +140,7 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnFrito.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        jTextField1.setText("");
         alimento = new PostreCaliente();
     }//GEN-LAST:event_jrbtnCalienteActionPerformed
 
@@ -147,6 +149,7 @@ public class JFramePostre extends javax.swing.JFrame {
         jrbtnCaliente.setSelected(false);
         jLabel1.setVisible(true);
         jTextField1.setVisible(true);
+        jTextField1.setText("");
         alimento = new PostreFrito();
     }//GEN-LAST:event_jrbtnFritoActionPerformed
 

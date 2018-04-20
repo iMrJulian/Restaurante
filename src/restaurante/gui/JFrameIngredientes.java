@@ -22,11 +22,14 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     PlatoFuerte alimento;
     Plato tipo;
     public static String a;
+
+    String nombre;
     public JFrameIngredientes() {
         initComponents();
         jTextField1.setVisible(false);
         jLabel1.setVisible(false);
         tipo = new Plato();
+
     }
 
     /**
@@ -161,7 +164,7 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jrbtnFrutaActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        tipo.guardarPosbe(alimento.guardar(jTextField1.getText()), alimento);
+        tipo.guardarPosbe(alimento.guardar(jTextField1.getText()), alimento,nombre);
         a=tipo.mostrarFuerte();
         jrbtnFruta.setSelected(false);
         jrbtnProteina.setSelected(false);

@@ -31,9 +31,9 @@ public class Plato {
         postre.add(m);
     }
     
-    public void guardarPosbe(String alimento, PlatoFuerte m  ) {
+    public void guardarPosbe(String alimento, PlatoFuerte m ,String nombre ) {
         m.setPlato(alimento);
-        m.setNombre(alimento);
+        m.setNombre(nombre);
         fuerte.add(m);
     }
     public String mostrarPosbe() {
@@ -46,8 +46,7 @@ public class Plato {
     public String mostrarFuerte() {
         String mem = "";
         for (PlatoFuerte memoria : fuerte) {
-             mem = mem + memoria.getNombre();
-             mem = mem +"\n"+ memoria.getPlato()+ ", ";
+             mem = mem + "\n"+memoria.getNombre()+ " "+memoria.getPlato()+ ", ";
         }
         mem+="\n";
         return mem;
