@@ -112,6 +112,7 @@ public class JFrameFuerte extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnAgregarActionPerformed
 
     private void jbtnFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnFinalizarActionPerformed
+        jTextField1.setText("");
         this.dispose();
     }//GEN-LAST:event_jbtnFinalizarActionPerformed
 

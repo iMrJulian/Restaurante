@@ -47,6 +47,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnCervezas = new javax.swing.JRadioButton();
         jrbtnVinos = new javax.swing.JRadioButton();
         jrbtnGaseosas = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,7 +124,7 @@ public class JFrameBebida extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jrbtnCervezas)
                             .addComponent(jrbtnVinos))
-                        .addGap(0, 32, Short.MAX_VALUE))
+                        .addGap(0, 130, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jrbtnLicores)
@@ -131,9 +132,11 @@ public class JFrameBebida extends javax.swing.JFrame {
                             .addComponent(jrbtnJugos))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,8 +155,13 @@ public class JFrameBebida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jrbtnAgua)
                     .addComponent(jrbtnVinos))
-                .addGap(38, 38, 38)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -170,8 +178,11 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLicores.setSelected(false);
         jrbtnJugos.setSelected(false);
         jrbtnCervezas.setEnabled(false);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jrbtnVinos.setEnabled(false);
         jrbtnGaseosas.setSelected(false);
+        jLabel1.setText("");
         this.dispose();
 
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -182,9 +193,12 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnAgua.setSelected(false);
         jrbtnLicores.setSelected(false);
         jrbtnJugos.setSelected(false);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jrbtnCervezas.setEnabled(false);
-        jrbtnVinos.setEnabled(false);
+        jrbtnVinos.setEnabled(false);      
         jTextField1.setEnabled(true);
+        jLabel1.setText("marca");
         alimento = new Gaseosas();
     }//GEN-LAST:event_jrbtnGaseosasActionPerformed
 
@@ -195,6 +209,8 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLimonada.setSelected(false);
         jrbtnCervezas.setEnabled(true);
         jrbtnVinos.setEnabled(true);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jTextField1.setEnabled(false);
 
     }//GEN-LAST:event_jrbtnLicoresActionPerformed
@@ -207,7 +223,10 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLimonada.setSelected(false);
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jTextField1.setEnabled(true);
+        jLabel1.setText("de");
         alimento = new Jugos();
     }//GEN-LAST:event_jrbtnJugosActionPerformed
 
@@ -219,8 +238,12 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnJugos.setSelected(false);
         jrbtnCervezas.setEnabled(false);
         jrbtnVinos.setEnabled(false);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jTextField1.setEnabled(true);
+        jLabel1.setText("de");
         alimento = new Limonada();
+        
     }//GEN-LAST:event_jrbtnLimonadaActionPerformed
 
     private void jrbtnAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnAguaActionPerformed
@@ -230,6 +253,8 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnLicores.setSelected(false);
         jrbtnLimonada.setSelected(false);
         jrbtnCervezas.setEnabled(false);
+        jrbtnCervezas.setSelected(false);
+        jrbtnVinos.setSelected(false);
         jrbtnVinos.setEnabled(false);
         alimento = new Agua();
         tipo.guardarPosbe(alimento.guardar(""),alimento);
@@ -245,6 +270,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnAgua.setSelected(false);
         jrbtnVinos.setSelected(false);
         jTextField1.setEnabled(true);
+        jLabel1.setText("Marca");
         alimento = new Cervezas();
     }//GEN-LAST:event_jrbtnCervezasActionPerformed
 
@@ -256,6 +282,7 @@ public class JFrameBebida extends javax.swing.JFrame {
         jrbtnAgua.setSelected(false);
         jrbtnCervezas.setSelected(false);
         jTextField1.setEnabled(true);
+        jLabel1.setText("tipo");
         alimento = new Vinos();
     }//GEN-LAST:event_jrbtnVinosActionPerformed
 
@@ -297,6 +324,7 @@ public class JFrameBebida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JRadioButton jrbtnAgua;
     private javax.swing.JRadioButton jrbtnCervezas;

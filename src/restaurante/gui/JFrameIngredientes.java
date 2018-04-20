@@ -145,14 +145,14 @@ public class JFrameIngredientes extends javax.swing.JFrame {
     private void jrbtnVerduraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnVerduraActionPerformed
         jrbtnProteina.setSelected(false);
         jrbtnGranos.setSelected(false);
-        jrbtnVerdura.setSelected(false);
+        jrbtnFruta.setSelected(false);
         jTextField1.setVisible(true);
         jLabel1.setVisible(true);
         alimento = new Verdura();
     }//GEN-LAST:event_jrbtnVerduraActionPerformed
 
     private void jrbtnFrutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbtnFrutaActionPerformed
-        jrbtnFruta.setSelected(false);
+        jrbtnVerdura.setSelected(false);
         jrbtnGranos.setSelected(false);
         jrbtnProteina.setSelected(false);
         jTextField1.setVisible(true);
